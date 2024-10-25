@@ -26,4 +26,9 @@ public class RestTemplateController {
     public void delete(@PathVariable Long id) {
         this.api_service.delete(id);
     }
+
+    @PutMapping("/{id}")
+    public void put(@PathVariable Long id, @RequestBody Cliente cliente) {
+        this.api_service.update(id, cliente);
+    }
 }
