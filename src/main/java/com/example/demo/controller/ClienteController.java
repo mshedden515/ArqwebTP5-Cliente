@@ -31,7 +31,6 @@ public class ClienteController {
 
 	@GetMapping("/{id}")
 	public ResponseEntity<Cliente> getById(@PathVariable Integer id) {
-		System.out.println("aca");
 		return service.findById(id);
 	}
 
